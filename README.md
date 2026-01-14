@@ -4,9 +4,9 @@ A modern, responsive, single-page landing website for a travel/tour service, des
 
 This project demonstrates how a production-ready marketing page can be built using React and Tailwind CSS, enhanced with Framer Motion animations and a real contact form integration.
 
----
+Repository: https://github.com/SubDan12/japan-travel
 
-## 🌍 Project Overview
+## Project Overview
 
 **Japan Tours** is a premium travel landing page showcasing a 10-day guided tour across Japan.  
 The page is designed to feel modern, elegant, and trustworthy while remaining lightweight and fast.
@@ -21,7 +21,7 @@ The goal of this project was to:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - Fully responsive design (mobile / tablet / desktop)
 - Premium glassmorphism UI with layered gradients
@@ -33,7 +33,7 @@ The goal of this project was to:
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **React** (with Vite)
 - **Tailwind CSS**
@@ -43,7 +43,7 @@ The goal of this project was to:
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 JAPAN-TRAVEL/
 │
