@@ -6,7 +6,7 @@ import MotionField from "./contactUI/MotionField";
 import SocialIcon from "./heroUI/SocialIcon";
 
 export default function Contacts() {
-  const [state, handleSubmit] = useForm("mwvpygln"); // 👈 replace this
+  const [state, handleSubmit] = useForm("mwvpygln"); 
 
   return (
     <section id="contacts" className="relative">
@@ -131,5 +131,3 @@ export default function Contacts() {
     </section>
   );
 }
-
-/* ===== Fields ===== */
