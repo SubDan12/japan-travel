@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, stagger } from "../utils/motion"; // ✅ adjust path if your folders differ
+import { fadeUp, stagger } from "../utils/motion"; 
 
 import SectionTitle from "./aboutUI/SectionTitle";
 import Dot from "./aboutUI/Dot";
@@ -83,7 +83,7 @@ export default function About() {
               />
             </motion.div>
 
-            {/* Desktop timeline (reference layout) */}
+            {/* Desktop timeline */}
             <motion.div
               className="hidden lg:block"
               variants={fadeUp}
@@ -135,6 +135,3 @@ export default function About() {
   );
 }
 
-/* ===== Desktop timeline primitives ===== */
-
-/* ===== Mobile/tablet timeline ===== */
