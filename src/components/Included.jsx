@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, stagger } from "../utils/motion"; // ✅ adjust path if needed
+import { fadeUp, stagger } from "../utils/motion"; 
 
 import GlassCard from "./includedUI/GlassCard";
 import SectionTitle from "./includedUI/SectionTitle";
