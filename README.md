@@ -7,6 +7,12 @@ This project demonstrates how a production-ready marketing page can be built usi
 Live Demo:https://japan-travel-eight.vercel.app/
 Repository: https://github.com/SubDan12/japan-travel
 
+## Screenshots
+
+![Hero](./screenshots/hero.png)
+![About](./screenshots/about.png)
+![Contact](./screenshots/contact.png)
+
 ## Project Overview
 
 **Japan Tours** is a premium travel landing page showcasing a 10-day guided tour across Japan.  
