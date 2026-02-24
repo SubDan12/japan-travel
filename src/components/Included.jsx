@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, stagger } from "../utils/motion"; 
+import { fadeUp, stagger } from "../utils/motion";
 
 import GlassCard from "./includedUI/GlassCard";
 import SectionTitle from "./includedUI/SectionTitle";
@@ -28,11 +28,13 @@ export default function Included() {
     },
   ];
 
+  const MotionDiv = motion.div;
+
   return (
     <section id="included" className="bg-transparent">
       <div className="mx-auto max-w-275 px-6 py-16">
         {/* Title */}
-        <motion.div
+        <MotionDiv
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
@@ -40,10 +42,10 @@ export default function Included() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <SectionTitle title="WHAT'S INCLUDED" />
-        </motion.div>
+        </MotionDiv>
 
         {/* Grid */}
-        <motion.div
+        <MotionDiv
           className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
           variants={stagger(0.1)}
           initial="hidden"
@@ -58,7 +60,7 @@ export default function Included() {
               desc={it.desc}
             />
           ))}
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   );

@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { fadeUp } from "../../utils/motion";
 
 export default function MobileStop({ days, city, images = [] }) {
+  const MotionDiv = motion.div;
+
   return (
-    <motion.div
+    <MotionDiv
       className="rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
       variants={fadeUp}
       transition={{ duration: 0.55, ease: "easeOut" }}
@@ -22,6 +24,6 @@ export default function MobileStop({ days, city, images = [] }) {
           </div>
         ))}
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

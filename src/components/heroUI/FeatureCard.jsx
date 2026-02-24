@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { fadeUp } from "../../utils/motion";
 
 export default function FeatureCard({ img, title, subtitle }) {
+  const MotionDiv = motion.div;
+
   return (
-    <motion.div
+    <MotionDiv
       className="relative h-37.5 w-28 shrink-0 overflow-hidden rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md sm:h-41.25 sm:w-30"
       variants={fadeUp}
       whileHover={{ y: -4 }}
@@ -26,6 +28,6 @@ export default function FeatureCard({ img, title, subtitle }) {
           </p>
         ) : null}
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

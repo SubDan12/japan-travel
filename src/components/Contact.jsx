@@ -6,14 +6,18 @@ import MotionField from "./contactUI/MotionField";
 import SocialIcon from "./heroUI/SocialIcon";
 
 export default function Contacts() {
-  const [state, handleSubmit] = useForm("mwvpygln"); 
+  const [state, handleSubmit] = useForm("mwvpygln");
+
+  const MotionDiv = motion.div;
+  const MotionForm = motion.form;
+  const MotionButton = motion.button;
 
   return (
     <section id="contacts" className="relative">
       <div className="relative mx-auto max-w-275 px-6 pt-12 pb-16">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
           {/* Form */}
-          <motion.div
+          <MotionDiv
             className="w-full max-w-130 rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-xl"
             variants={fadeUp}
             initial="hidden"
@@ -42,7 +46,7 @@ export default function Contacts() {
                   Leave a request
                 </p>
 
-                <motion.form
+                <MotionForm
                   onSubmit={handleSubmit}
                   className="mt-6 space-y-4"
                   variants={stagger(0.08)}
@@ -75,7 +79,7 @@ export default function Contacts() {
                     errors={state.errors}
                   />
 
-                  <motion.button
+                  <MotionButton
                     type="submit"
                     disabled={state.submitting}
                     className="mt-2 w-full rounded-xl bg-white/85 py-2.5 text-[13px] font-semibold text-black transition hover:bg-white disabled:opacity-50"
@@ -84,18 +88,18 @@ export default function Contacts() {
                     whileTap={{ scale: 0.98 }}
                   >
                     {state.submitting ? "Sending..." : "Send"}
-                  </motion.button>
-                </motion.form>
+                  </MotionButton>
+                </MotionForm>
               </>
             )}
-          </motion.div>
+          </MotionDiv>
 
           {/* Right empty space (reference) */}
           <div className="hidden lg:block" />
         </div>
 
         {/* Footer */}
-        <motion.div
+        <MotionDiv
           className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between"
           variants={fadeUp}
           initial="hidden"
@@ -126,7 +130,7 @@ export default function Contacts() {
             <SocialIcon src="/social/facebook.png" alt="Facebook" />
             <SocialIcon src="/social/twitter.png" alt="Twitter" />
           </div>
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   );

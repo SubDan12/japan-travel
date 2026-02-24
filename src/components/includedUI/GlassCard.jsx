@@ -4,8 +4,10 @@ import { fadeUp } from "../../utils/motion";
 import Icon from "./Icon";
 
 export default function GlassCard({ icon, title, desc }) {
+  const MotionDiv = motion.div;
+
   return (
-    <motion.div
+    <MotionDiv
       className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 px-6 py-6 backdrop-blur-md"
       variants={fadeUp}
       whileHover={{ y: -4 }}
@@ -26,6 +28,6 @@ export default function GlassCard({ icon, title, desc }) {
           {desc}
         </p>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

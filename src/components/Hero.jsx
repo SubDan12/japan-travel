@@ -5,8 +5,12 @@ import FeatureCard from "./heroUI/FeatureCard";
 import SocialIcon from "./heroUI/SocialIcon";
 
 export default function Hero() {
+  const MotionDiv = motion.div;
+  const MotionH1 = motion.h1;
+  const MotionA = motion.a;
+
   return (
-    <section className="relative min-h-[72vh] sm:min-h-[90vh] overflow-hidden">
+    <section className="relative z-10 min-h-[72vh] sm:min-h-[90vh] overflow-hidden">
       {/* Background */}
       <img
         src="/images/hero.jpg"
@@ -15,7 +19,7 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <motion.div
+      <MotionDiv
         className="absolute inset-0 bg-linear-to-b from-black/10 via-black/35 to-black/90"
         variants={fadeIn}
         initial="hidden"
@@ -26,24 +30,24 @@ export default function Hero() {
       {/* Content */}
       <div className="relative mx-auto max-w-275 px-6 pt-24 sm:pt-28">
         {/* JAPAN */}
-        <motion.h1
+        <MotionH1
           className="select-none whitespace-nowrap overflow-hidden text-[72px] font-semibold tracking-[0.16em] text-white/18 sm:text-[96px] sm:tracking-[0.18em] md:text-[150px] md:tracking-[0.20em] lg:text-[190px] lg:tracking-[0.24em] xl:text-[220px]"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           JAPAN
-        </motion.h1>
+        </MotionH1>
 
         {/* Cards + Book */}
-        <motion.div
+        <MotionDiv
           className="mt-8 flex flex-col gap-4 lg:mt-10 lg:flex-row lg:items-end lg:justify-between lg:gap-8"
           variants={stagger(0.09)}
           initial="hidden"
           animate="show"
         >
           {/* Cards group */}
-          <motion.div
+          <MotionDiv
             className="flex items-end gap-4 overflow-x-auto pb-2 hide-scrollbar lg:overflow-visible lg:pb-0"
             variants={stagger(0.08)}
           >
@@ -68,10 +72,10 @@ export default function Hero() {
               title="enjoy"
               subtitle="the vibe"
             />
-          </motion.div>
+          </MotionDiv>
 
           {/* Book button */}
-          <motion.a
+          <MotionA
             href="#contacts"
             className="h-13 w-full rounded-2xl bg-white/80 text-center text-[16px] font-semibold leading-13 text-black shadow-sm hover:bg-white lg:w-57.5 lg:shrink-0 lg:text-[18px]"
             variants={fadeUp}
@@ -80,14 +84,14 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 350, damping: 22 }}
           >
             Book
-          </motion.a>
-        </motion.div>
+          </MotionA>
+        </MotionDiv>
       </div>
 
       {/* Social icons */}
       <div className="absolute left-0 top-0 hidden w-full lg:block">
         <div className="relative mx-auto max-w-275 px-6">
-          <motion.div
+          <MotionDiv
             className="absolute right-0 top-52"
             initial={{ opacity: 0, x: 12 }}
             animate={{ opacity: 1, x: 0 }}
@@ -98,7 +102,7 @@ export default function Hero() {
               <SocialIcon src="/social/facebook.png" alt="Facebook" />
               <SocialIcon src="/social/twitter.png" alt="Twitter" />
             </div>
-          </motion.div>
+          </MotionDiv>
         </div>
       </div>
     </section>

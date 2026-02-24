@@ -4,9 +4,11 @@ import { fadeUp } from "../../utils/motion";
 import Field from "./Field";
 
 export default function MotionField(props) {
+  const MotionDiv = motion.div;
+
   return (
-    <motion.div variants={fadeUp}>
+    <MotionDiv variants={fadeUp}>
       <Field {...props} />
-    </motion.div>
+    </MotionDiv>
   );
 }

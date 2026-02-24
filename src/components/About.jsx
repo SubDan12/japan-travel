@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, stagger } from "../utils/motion"; 
+import { fadeUp, stagger } from "../utils/motion";
 
 import SectionTitle from "./aboutUI/SectionTitle";
 import Dot from "./aboutUI/Dot";
@@ -9,11 +9,14 @@ import StackedImages from "./aboutUI/StackedImages";
 import MobileStop from "./aboutUI/MobileStop";
 
 export default function About() {
+  const MotionDiv = motion.div;
+  const MotionP = motion.p;
+
   return (
     <section id="about" className="bg-black">
       <div className="mx-auto max-w-275 px-6 pt-12 pb-28 md:py-24 md:pb-24">
         {/* Title */}
-        <motion.div
+        <MotionDiv
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
@@ -21,27 +24,27 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <SectionTitle title="ABOUT THE TOUR" />
-        </motion.div>
+        </MotionDiv>
 
         <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-2 lg:gap-14">
           {/* Left text */}
-          <motion.div
+          <MotionDiv
             className="space-y-8 lg:space-y-32 text-white/70"
             variants={stagger(0.12)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.35 }}
           >
-            <motion.p
+            <MotionP
               className="max-w-sm text-[14px] leading-relaxed"
               variants={fadeUp}
             >
               We&apos;ve planned a simple and convenient 10-day itinerary for
               your trip to Japan. You&apos;ll visit three cities: Osaka, Kyoto,
               and Tokyo.
-            </motion.p>
+            </MotionP>
 
-            <motion.p
+            <MotionP
               className="max-w-sm text-[14px] leading-relaxed"
               variants={fadeUp}
             >
@@ -49,13 +52,13 @@ export default function About() {
               everything is already organized. We&apos;ll show you where to go,
               what to see, and where to eat, so you can simply enjoy the
               journey.
-            </motion.p>
-          </motion.div>
+            </MotionP>
+          </MotionDiv>
 
           {/* Right side */}
           <div className="relative">
             {/* Mobile/tablet timeline */}
-            <motion.div
+            <MotionDiv
               className="space-y-6 lg:hidden"
               variants={stagger(0.12)}
               initial="hidden"
@@ -81,10 +84,10 @@ export default function About() {
                 city="Tokyo"
                 images={["/images/tokyo1.jpg"]}
               />
-            </motion.div>
+            </MotionDiv>
 
             {/* Desktop timeline */}
-            <motion.div
+            <MotionDiv
               className="hidden lg:block"
               variants={fadeUp}
               initial="hidden"
@@ -127,11 +130,10 @@ export default function About() {
                   <Photo src="/images/tokyo1.jpg" size="md" />
                 </div>
               </div>
-            </motion.div>
+            </MotionDiv>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
